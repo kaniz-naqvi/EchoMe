@@ -4,20 +4,20 @@ const getBrowserTheme = () => {
     return window.matchMedia("(prefers-color-scheme: dark)").matches
       ? {
           background: "#202124",
-          text: "#FAFAFA",
+          text: "#fcf8f8",
           grayBg: "#55555A",
           greyText: "#ECECEC",
         } // dark bg, light text
       : {
           background: "#FFFFFF",
-          text: "#202124",
+          text: "#25100e",
           grayBg: "#ECECEC",
           greyText: "#55555A",
         }; // light bg, dark text
   }
   return {
     background: "#FFFFFF",
-    text: "#202124",
+    text: "#25100e",
     grayBg: "#ECECEC",
     greyText: "#55555A",
   }; // fallback
