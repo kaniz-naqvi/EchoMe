@@ -10,13 +10,7 @@ const Home = () => {
   const theme = useTheme();
   const user = userConfig; // will replace with API calls
   const userSections = user?.sections;
-  // const otherSections = userSections
-  //   ? Object.fromEntries(
-  //       Object.entries(userSections).filter(
-  //         ([key]) => !["education", "experience"].includes(key)
-  //       )
-  //     )
-  //   : {};
+
   const tabs = [
     { name: "Overview", component: <OverviewTab theme={theme} /> },
     {
