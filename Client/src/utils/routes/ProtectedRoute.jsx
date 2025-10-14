@@ -1,3 +1,6 @@
+import React from "react";
+
+
 const ProtectedRoute = ({ isAuth, children, Navigate, publicRedirectPath }) => {
   if (!isAuth) {
     return <Navigate to={publicRedirectPath} replace />;

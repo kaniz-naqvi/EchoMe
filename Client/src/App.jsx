@@ -10,6 +10,8 @@ import {
 import Loader from "./components/Atoms/Loader/Loader";
 import ProtectedRoute from "./utils/routes/ProtectedRoute";
 import NotFoundPage from "./Pages/PageNotFound/PageNotFound";
+import { H1 } from "./components/Atoms/Shared/headings";
+import Auth from "./Pages/Auth/Auth";
 
 export default function App() {
   const routes = allowedRoutes();
@@ -64,25 +66,11 @@ export default function App() {
       </Route>
 
       {/* Auth */}
-      <Route path="/auth">
-        {authLinks.map((r) => {
-          const Component = r.view;
-          return (
-            <Route
-              key={r.path}
-              path={r.path}
-              element={
-                <Suspense fallback={<Loader />}>
-                  <Component />
-                </Suspense>
-              }
-            />
-          );
-        })}
-      </Route>
+      <Route element={<Auth/>} path={LAYOUT_AUTH} />
 
       {/* Catch-all */}
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );
 }
+
