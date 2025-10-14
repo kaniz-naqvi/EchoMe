@@ -8,13 +8,27 @@ const InputComponent = ({
   className = "",
   label,
   required = false,
+    checkboxLabel,
   ...props
 }) => {
   const [showPassword, setShowPassword] = useState(false);
   const Icon = iconName ? getIcon(iconName) : null;
 
   const inputType = type === "password" && showPassword ? "text" : type;
-
+ if (type === "checkbox") {
+    return (
+      <label className={`flex items-center gap-2 text-sm ${className}`}>
+        <input
+          type="checkbox"
+          className="w-4 h-4 rounded border focus:ring-2 focus:ring-offset-0"
+          {...props}
+        />
+        <span>
+          {checkboxLabel} {required && <span className="text-red-500">*</span>}
+        </span>
+      </label>
+    );
+  }
   return (
     <div className="w-full">
       {label && (

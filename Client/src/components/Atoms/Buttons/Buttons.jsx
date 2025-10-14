@@ -3,15 +3,15 @@ import React from "react";
 const Button = ({
   children,
   variant = "primary", // 'primary' | 'secondary' | 'ghost'
-  color = "#0E6BA8", // Accept color from parent
+  color="#0E6BA8", // Accept color from parent
   onClick,
   disabled = false,
   className = "",
   style = {},
-  rounded = "rounded-lg",
+  rounded = "rounded",
   ...props
 }) => {
-  const baseClasses = `px-4 flex items-center gap-1 cursor-pointer py-2 ${rounded} transition font-medium focus:outline-none focus:ring-2 focus:ring-offset-2`;
+  const baseClasses = `px-4 cursor-pointer py-2 ${rounded}  transition font-medium focus:outline-none focus:ring-2 focus:ring-offset-2`;
 
   // Use passed color or fallback to current text color
   const buttonColor = color || "currentColor";

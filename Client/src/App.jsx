@@ -10,7 +10,6 @@ import {
 import Loader from "./components/Atoms/Loader/Loader";
 import ProtectedRoute from "./utils/routes/ProtectedRoute";
 import NotFoundPage from "./Pages/PageNotFound/PageNotFound";
-import { H1 } from "./components/Atoms/Shared/headings";
 import Auth from "./Pages/Auth/Auth";
 
 export default function App() {
@@ -66,8 +65,8 @@ export default function App() {
       </Route>
 
       {/* Auth */}
-      <Route element={<Auth/>} path={LAYOUT_AUTH} />
-
+      
+      <Route path="/auth" element={<Auth />} />
       {/* Catch-all */}
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
