@@ -10,19 +10,17 @@ const Auth = () => {
   // const [activeTab, setActiveTab] = useState("Login");
 
   const tabs = [
-    { name: "Login", component: <Login /> },
-    { name: "Register", component: <Register /> },
-  ];
+    {name:"login" , component : <Login/>},
+    {name:"register" , component : <Register/>}
+  ]
 
   return (
     <div className="lg:p-6 p-1">
       <H1 className="text-center mb-4">
         {/* {activeTab === "Login" ? "Welcome Back" : "Let’s Get Started"} */}
       </H1>
-
       <TabComponent
-        tabs={tabs}
-        
+         tabs={tabs}
         onTabChange={(tabName) => setActiveTab(tabName)}
         variant="underline"
         grayBg={theme?.grayBg}

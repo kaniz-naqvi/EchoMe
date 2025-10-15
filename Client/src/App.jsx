@@ -65,10 +65,11 @@ export default function App() {
       </Route>
 
       {/* Auth */}
-      
+
       <Route path="/auth" element={<Auth />} />
       {/* Catch-all */}
       <Route path="*" element={<NotFoundPage />} />
+
     </Routes>
   );
 }
