@@ -5,12 +5,12 @@ const Card = ({
   background,
   heightAndWidth,
   rounded = "rounded-2xl",
+  border = "  border  border-white/30",
 }) => {
   return (
     <div
       className={`
-        border
-        border-[#ffffff4d]
+      ${border}
         h-auto 
         p-3 sm:p-4 lg:p-6 
         px-4 sm:px-6 lg:px-10 

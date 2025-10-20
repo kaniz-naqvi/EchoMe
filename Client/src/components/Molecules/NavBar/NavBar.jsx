@@ -18,6 +18,7 @@ const NavBar = ({ navLinks, colors, variant = "sidebar" }) => {
         background={colors.background}
         heightAndWidth={"h-full w-full"}
         rounded="rounded-tr-2xl rounded-br-2xl"
+        border="none"
       >
         <div className="flex justify-center gap-2 flex-col items-center py-4 w-full">
           {navLinks?.map((link) => {

@@ -9,10 +9,10 @@ const Register = () => {
   const colors = useTheme();
 
   const [form, setForm] = useState({
-    firstName: "",
-    lastName: "",
+    fullName: "",
     email: "",
     password: "",
+    confrimPassword: "",
   });
 
   const handleChange = (e) => {
@@ -39,31 +39,17 @@ const Register = () => {
         </p>
         {/* Form */}
         <form onSubmit={handleSubmit} className="space-y-4 relative z-10">
-          <div className="flex lg:flex-col flex-row gap-3">
-            {/* First Name */}
-            <InputComponent
-              icon={"profile"}
-              type="text"
-              name="firstName"
-              value={form.firstName}
-              onChange={handleChange}
-              label={"First Name"}
-              placeholder={"First Name"}
-              required
-            />
-
-            {/* Last Name */}
-            <InputComponent
-              icon={"profile"}
-              type="text"
-              name="lastName"
-              value={form.lastName}
-              onChange={handleChange}
-              label="Last name"
-              placeholder="Last name"
-              required
-            />
-          </div>
+          {/* First Name */}
+          <InputComponent
+            icon={"profile"}
+            type="text"
+            name="fullName"
+            value={form.fullName}
+            onChange={handleChange}
+            label={"Name"}
+            placeholder={"Your Name"}
+            required
+          />
 
           {/* Email */}
           <InputComponent
@@ -88,7 +74,16 @@ const Register = () => {
             onChange={handleChange}
             required
           />
-
+          <InputComponent
+            type="password"
+            name="password"
+            label="Confrim your password"
+            icon="lock"
+            placeholder="Password"
+            value={form.confrimPassword}
+            onChange={handleChange}
+            required
+          />
           {/* Button */}
           <div className="pt-2">
             <Button type="submit" className="w-full">
