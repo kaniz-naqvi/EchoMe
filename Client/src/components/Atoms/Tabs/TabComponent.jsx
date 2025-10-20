@@ -74,9 +74,9 @@ const TabComponent = ({
   const contentContainerClasses = () => {
     switch (variant) {
       case "vertical":
-        return "flex-1 p-4 lg:p-6";
+        return "flex-1 p-2 lg:p-6";
       default:
-        return "p-4 lg:p-6";
+        return "p-2 lg:p-6";
     }
   };
 

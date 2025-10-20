@@ -8,14 +8,14 @@ const InputComponent = ({
   className = "",
   label,
   required = false,
-    checkboxLabel,
+  checkboxLabel,
   ...props
 }) => {
   const [showPassword, setShowPassword] = useState(false);
   const Icon = iconName ? getIcon(iconName) : null;
 
   const inputType = type === "password" && showPassword ? "text" : type;
- if (type === "checkbox") {
+  if (type === "checkbox") {
     return (
       <label className={`flex items-center gap-2 text-sm ${className}`}>
         <input

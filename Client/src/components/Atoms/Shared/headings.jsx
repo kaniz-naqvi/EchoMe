@@ -1,18 +1,20 @@
 import React from "react";
 
-const H1 = ({ children, className = "", ...props }) => (
+const H1 = ({ children, className = "", color = "", ...props }) => (
   <h1
     className={`text-3xl lg:text-5xl font-bold mb-3 lg:mb-6 ${className}`}
     {...props}
+    style={{ color: color }}
   >
     {children}
   </h1>
 );
 
-const H2 = ({ children, className = "", ...props }) => (
+const H2 = ({ children, className = "", color = "", ...props }) => (
   <h2
     className={`text-2xl lg:text-4xl font-bold mb-2 lg:mb-5 ${className}`}
     {...props}
+    style={{ color: color }}
   >
     {children}
   </h2>
