@@ -88,8 +88,6 @@ export const AddSectionModal = ({
           value={formData.description}
           onChange={(e) => handleInputChange("description", e.target.value)}
           placeholder="Enter description..."
-          textColor="black"
-          borderColor="gray"
         />
       </div>
     </Modal>
